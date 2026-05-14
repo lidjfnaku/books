@@ -339,3 +339,17 @@ html {
     object-fit: cover;
     display: block;
 }
+.value-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s;
+    cursor: pointer;
+}
+
+.value-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+.value-link {
+    text-decoration: none;  /* ← ЭТО УБИРАЕТ ПОДЧЁРКИВАНИЕ */
+}
