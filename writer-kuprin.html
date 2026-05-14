@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Куприн — писатель | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .writer-page { display: flex; gap: 48px; margin: 40px 0; flex-wrap: wrap; }
+        .writer-photo { flex-shrink: 0; width: 280px; }
+        .writer-photo img { width: 100%; height: auto; border-radius: 20px; box-shadow: 8px 12px 24px rgba(0,0,0,0.12); }
+        .writer-info { flex: 1; min-width: 250px; }
+        .writer-name { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 500; color: #2b2b28; margin-bottom: 8px; }
+        .writer-years { font-size: 1.1rem; color: #9b6a5c; margin-bottom: 24px; border-bottom: 1px solid #e8e2d4; padding-bottom: 12px; }
+        .writer-values { background: #f8f5ef; padding: 20px 24px; border-radius: 20px; margin: 24px 0; }
+        .writer-values h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 12px; color: #2b2b28; }
+        .value-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+        .value-tag { background: white; padding: 5px 16px; border-radius: 30px; font-size: 0.85rem; color: #9b6a5c; border: 1px solid #dccfbc; }
+        .writer-quote { background: #fff9f0; padding: 20px 28px; border-radius: 20px; border-left: 4px solid #bc9a6c; margin: 24px 0; font-style: italic; color: #4a4842; }
+        .map-container { margin: 24px 0; background: #f0ece3; border-radius: 20px; overflow: hidden; }
+        .map-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 12px; color: #2b2b28; }
+        iframe { width: 100%; height: 300px; border: 0; }
+        .back-link { margin: 40px 0 60px; }
+        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+        @media (max-width: 700px) {
+            .writer-page { flex-direction: column; align-items: center; }
+            .writer-photo { width: 220px; }
+            .writer-name { font-size: 1.8rem; text-align: center; }
+            .writer-years { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="#">О проекте</a>
+        <a href="#">История / древняя проза</a>
+        <a href="index.html#goals">Цели и задачи</a>
+        <a href="index.html#writersGrid">Писатели</a>
+        <a href="books.html">Произведения</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <span class="value-word value-1">Вера</span>
+                <span class="value-word value-2">Добро</span>
+                <span class="value-word value-3">Справедливость</span>
+                <span class="value-word value-4">Совесть</span>
+                <span class="value-word value-5">Любовь</span>
+                <span class="value-word value-6">Честь</span>
+                <span class="value-word value-7">Семья</span>
+                <span class="value-word value-8">Патриотизм</span>
+                <span class="value-word value-9">Красота</span>
+                <span class="value-word value-10">Милосердие</span>
+                <span class="value-word value-11">Смирение</span>
+            </div>
+        </div>
+
+        <div class="writer-page">
+            <div class="writer-photo">
+                <img src="курин.webp" alt="Александр Куприн">
+            </div>
+            <div class="writer-info">
+                <h1 class="writer-name">Александр Куприн</h1>
+                <p class="writer-years">1870–1938 | Прозаик, переводчик</p>
+                
+                <div class="writer-values">
+                    <h3> Духовные ценности в творчестве</h3>
+                    <div class="value-tags">
+                        <span class="value-tag">Истинная любовь</span>
+                        <span class="value-tag">Милосердие</span>
+                        <span class="value-tag">Благородство</span>
+                        <span class="value-tag">Гуманизм</span>
+                        <span class="value-tag">Сострадание к «маленькому человеку»</span>
+                    </div>
+                    <p>Куприн возвышал бескорыстное чувство, способное преобразить человека. Он показывал ценность милосердия и человеческого участия, выступал против равнодушия и социальной несправедливости, часто сочувствуя тем, кто оказался на обочине жизни.</p>
+                </div>
+
+                <div class="writer-quote">
+                    «Любовь должна быть трагедией. Величайшей тайной в мире! Никакие жизненные удобства, расчёты и компромиссы не должны её касаться.»
+                </div>
+
+                <div class="map-container">
+                    <div class="map-title"> Место рождения</div>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=30.315868%2C53.902496&z=12&pt=30.315868,53.902496,flag&what=this&mode=search&text=Наровчат%2C%20Пензенская%20губерния" allowfullscreen></iframe>
+                    <div style="padding: 12px 16px; background: #f8f5ef; font-size: 0.85rem; color: #6f6559;">Наровчат, Пензенская губерния (Российская империя)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html#writersGrid" class="back-button">← Ко всем писателям</a>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>

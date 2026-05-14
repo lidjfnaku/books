@@ -1,0 +1,134 @@
+/* страница с книгами */
+.books-hero {
+    text-align: center;
+    padding: 48px 0 32px;
+}
+
+.books-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #2b2b28;
+}
+
+.books-hero p {
+    margin-top: 12px;
+    color: #6f6559;
+    font-size: 1.1rem;
+}
+
+/* сетка книг 3-4 в ряд */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 48px 32px;
+    margin: 48px 0 80px;
+}
+
+/* книга как физический объект */
+.book-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+}
+
+/* обложка с эффектом книги */
+.book-cover {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 
+        8px 12px 20px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover .book-cover {
+    box-shadow: 
+        12px 18px 28px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* затемнение при наведении с подписью */
+.book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 16px;
+}
+
+.book-card:hover .book-overlay {
+    opacity: 1;
+}
+
+.book-overlay .book-author {
+    color: #dccfbc;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.book-overlay .book-title {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* информация под обложкой */
+.book-info {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.book-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2b2b28;
+    margin-bottom: 4px;
+}
+
+.book-author-name {
+    font-size: 0.8rem;
+    color: #8b8478;
+}
+
+/* адаптация для мобильных */
+@media (max-width: 700px) {
+    .books-grid {
+        gap: 32px 20px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .books-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .book-overlay .book-title {
+        font-size: 0.8rem;
+    }
+}

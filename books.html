@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Произведения — Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="#">О проекте</a>
+        <a href="#">История / древняя проза</a>
+        <a href="index.html#goals">Цели и задачи</a>
+        <a href="index.html#writersGrid">Писатели</a>
+        <a href="books.html">Произведения</a>
+    </div>
+</div>
+
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <span class="value-word value-1">Вера</span>
+                <span class="value-word value-2">Добро</span>
+                <span class="value-word value-3">Справедливость</span>
+                <span class="value-word value-4">Совесть</span>
+                <span class="value-word value-5">Любовь</span>
+                <span class="value-word value-6">Честь</span>
+                <span class="value-word value-7">Семья</span>
+                <span class="value-word value-8">Патриотизм</span>
+                <span class="value-word value-9">Красота</span>
+                <span class="value-word value-10">Милосердие</span>
+                <span class="value-word value-11">Смирение</span>
+            </div>
+        </div>
+
+        <div class="books-hero">
+            <h1>Произведения Серебряного века</h1>
+            <p>Книги, в которых живут духовно-нравственные ценности России</p>
+        </div>
+
+        <div class="books-grid">
+            
+            <!-- Реквием -->
+            <div class="book-card" data-book="rekviem">
+                <div class="book-cover">
+                    <img src="реквием.jpg" alt="Анна Ахматова - Реквием">
+                    <div class="book-overlay">
+                        <span class="book-author">Анна Ахматова</span>
+                        <span class="book-title">РЕКВИЕМ</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Реквием</h3>
+                    <p class="book-author-name">Анна Ахматова</p>
+                </div>
+            </div>
+
+            <!-- Гранатовый браслет -->
+            <div class="book-card" data-book="granatoviy">
+                <div class="book-cover">
+                    <img src="гранатовый браслет.jpg" alt="Куприн - Гранатовый браслет">
+                    <div class="book-overlay">
+                        <span class="book-author">А. И. Куприн</span>
+                        <span class="book-title">ГРАНАТОВЫЙ БРАСЛЕТ</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Гранатовый браслет</h3>
+                    <p class="book-author-name">Александр Куприн</p>
+                </div>
+            </div>
+
+            <!-- Очарованный странник -->
+            <div class="book-card" data-book="strannik">
+                <div class="book-cover">
+                    <img src="странник.webp" alt="Лесков - Очарованный странник">
+                    <div class="book-overlay">
+                        <span class="book-author">Н. С. Лесков</span>
+                        <span class="book-title">Очарованный странник</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Очарованный странник</h3>
+                    <p class="book-author-name">Николай Лесков</p>
+                </div>
+            </div>
+
+            <!-- Петербург -->
+            <div class="book-card" data-book="peterburg">
+                <div class="book-cover">
+                    <img src="петербург.webp" alt="Андрей Белый - Петербург">
+                    <div class="book-overlay">
+                        <span class="book-author">АНДРЕЙ БЕЛЫЙ</span>
+                        <span class="book-title">Петербург</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Петербург</h3>
+                    <p class="book-author-name">Андрей Белый</p>
+                </div>
+            </div>
+
+            <!-- Мелкий бес -->
+            <div class="book-card" data-book="melkiy-bes">
+                <div class="book-cover">
+                    <img src="мелкий бес.webp" alt="Сологуб - Мелкий бес">
+                    <div class="book-overlay">
+                        <span class="book-author">Ф. К. Сологуб</span>
+                        <span class="book-title">МЕЛКИЙ БЕС</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Мелкий бес</h3>
+                    <p class="book-author-name">Фёдор Сологуб</p>
+                </div>
+            </div>
+
+            <!-- Жизнь Арсеньева -->
+            <div class="book-card" data-book="zhizn-arseneva">
+                <div class="book-cover">
+                    <img src="жизнь.webp" alt="Бунин - Жизнь Арсеньева">
+                    <div class="book-overlay">
+                        <span class="book-author">ИВАН БУНИН</span>
+                        <span class="book-title">Жизнь Арсеньева</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Жизнь Арсеньева</h3>
+                    <p class="book-author-name">Иван Бунин</p>
+                </div>
+            </div>
+
+            <!-- Двенадцать -->
+            <div class="book-card" data-book="dvenadtsat">
+                <div class="book-cover">
+                    <img src="12.webp" alt="Блок - 12">
+                    <div class="book-overlay">
+                        <span class="book-author">АЛЕКСАНДР БЛОК</span>
+                        <span class="book-title">Двенадцать</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Двенадцать</h3>
+                    <p class="book-author-name">Александр Блок</p>
+                </div>
+            </div>
+
+            <!-- Иуда Искариот -->
+            <div class="book-card" data-book="iuda">
+                <div class="book-cover">
+                    <img src="иуда.webp" alt="Андреев - Иуда Искариот">
+                    <div class="book-overlay">
+                        <span class="book-author">ЛЕОНИД АНДРЕЕВ</span>
+                        <span class="book-title">Иуда Искариот</span>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-name">Иуда Искариот</h3>
+                    <p class="book-author-name">Леонид Андреев</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+
+    dotsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+        }
+    });
+
+    // НАВИГАЦИЯ ПО КНИГАМ — ТЕПЕРЬ ВСЕ ВЕДУТ НА СВОИ СТРАНИЦЫ
+    const bookCards = document.querySelectorAll('.book-card');
+    bookCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const bookId = card.getAttribute('data-book');
+            
+            const links = {
+                'rekviem': 'book-rekviem.html',
+                'granatoviy': 'book-granatoviy.html',
+                'strannik': 'book-strannik.html',
+                'peterburg': 'book-peterburg.html',
+                'melkiy-bes': 'book-melkiy-bes.html',
+                'zhizn-arseneva': 'book-zhizn-arseneva.html',
+                'dvenadtsat': 'book-dvenadtsat.html',
+                'iuda': 'book-iuda.html'
+            };
+            
+            if (links[bookId]) {
+                window.location.href = links[bookId];
+            } else {
+                alert('Страница с этой книгой скоро появится! ');
+            }
+        });
+    });
+</script>
+</body>
+</html>

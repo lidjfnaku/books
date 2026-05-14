@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fefcf5;
+    color: #1f1e1b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ===== шапка с ценностями ===== */
+.values-header {
+    padding: 48px 0 24px;
+    border-bottom: 1px solid #e8e2d4;
+}
+
+.values-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.value-word {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    cursor: default;
+}
+
+.value-word:hover {
+    transform: translateY(-3px);
+}
+
+/* цвета для ценностей */
+.value-1 { color: #9b6a5c; }
+.value-2 { color: #6f8f6a; }
+.value-3 { color: #c17a5c; }
+.value-4 { color: #5c7c8a; }
+.value-5 { color: #bc9a6c; }
+.value-6 { color: #8f6b5e; }
+.value-7 { color: #7e8f6e; }
+.value-8 { color: #a57164; }
+.value-9 { color: #6a8d8f; }
+.value-10 { color: #b58b6b; }
+.value-11 { color: #9c7c5e; }
+
+/* ===== три точки ===== */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 32px 0;
+    position: relative;
+}
+
+.three-dots {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #2b2b28;
+    transition: opacity 0.2s;
+}
+
+.three-dots:hover {
+    opacity: 0.6;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 70px;
+    right: 32px;
+    background: #fffdf9;
+    border: 1px solid #e2dbcf;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+    padding: 12px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: #1f1e1b;
+    font-size: 15px;
+    transition: background 0.1s;
+}
+
+.dropdown-menu a:hover {
+    background: #f3efe8;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== герой ===== */
+.hero {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #2b2b28;
+    letter-spacing: -0.3px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero p {
+    margin-top: 24px;
+    color: #5e5b55;
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== цели и задачи (как на твоей фотографии) ===== */
+.goals-section {
+    background: #f8f5ef;
+    border-radius: 32px;
+    padding: 56px 48px;
+    margin: 60px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.two-columns {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 240px;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9b8e7a;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.goal-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    line-height: 1.45;
+}
+
+.goals-list {
+    list-style: none;
+}
+
+.goals-list li {
+    margin-bottom: 20px;
+    padding-left: 28px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #2f2e2a;
+}
+
+.goals-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #bc9a6c;
+    font-weight: 500;
+}
+
+.quote-small {
+    font-style: italic;
+    color: #6f6559;
+    border-left: 3px solid #dccfbc;
+    padding-left: 20px;
+    margin-top: 28px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ===== писатели ===== */
+.writers-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 70px 0 32px;
+    text-align: center;
+}
+
+.writers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.writer-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    border: 1px solid #ece5db;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.writer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+    border-color: #d9cdbb;
+}
+
+.writer-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #e7e0d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #897f6e;
+    font-family: monospace;
+}
+
+/* заглушка для фото — потом заменим на реальные картинки */
+.writer-img-placeholder {
+    background: #e7e0d3;
+}
+
+.writer-info {
+    padding: 20px 20px 24px;
+}
+
+.writer-name {
+    font-size: 1.45rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.writer-card:hover .writer-name {
+    color: #9b6a5c;
+}
+
+.writer-years {
+    font-size: 0.85rem;
+    color: #9b8e7a;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+}
+
+.writer-desc {
+    font-size: 0.9rem;
+    color: #4a4842;
+    line-height: 1.4;
+}
+
+/* ===== футер ===== */
+.footer {
+    border-top: 1px solid #e8e2d4;
+    padding: 40px 0;
+    text-align: center;
+    color: #8b8478;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+/* ===== адаптивность ===== */
+@media (max-width: 700px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    
+    .goals-section {
+        padding: 32px 24px;
+    }
+    
+    .values-cloud {
+        font-size: 1rem;
+        gap: 12px 18px;
+    }
+    
+    .top-bar {
+        padding: 16px 20px 0;
+    }
+    
+    .dropdown-menu {
+        right: 20px;
+    }
+
+}
+/* для плавного скролла к секциям */
+html {
+    scroll-behavior: smooth;
+}
+/* картинки писателей в карточках */
+.writer-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.writer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

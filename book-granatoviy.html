@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Куприн — Гранатовый браслет | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .book-page-layout { display: flex; gap: 32px; margin: 40px 0 32px; flex-wrap: wrap; }
+        .book-cover-small { flex-shrink: 0; width: 180px; }
+        .book-cover-small img { width: 180px; height: auto; border-radius: 12px; box-shadow: 6px 10px 18px rgba(0,0,0,0.12); display: block; }
+        .book-text-content { flex: 1; min-width: 200px; }
+        .book-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: #2b2b28; margin-bottom: 6px; }
+        .book-author { font-size: 1rem; color: #9b6a5c; margin-bottom: 20px; border-bottom: 1px solid #e8e2d4; padding-bottom: 12px; }
+        .book-description p { line-height: 1.65; margin-bottom: 18px; color: #2f2e2a; font-size: 1rem; }
+        .value-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 20px; }
+        .chip { background: #f8f5ef; padding: 4px 14px; border-radius: 30px; font-size: 0.8rem; font-weight: 500; color: #9b6a5c; transition: transform 0.2s, background 0.2s; cursor: default; display: inline-block; }
+        .chip:hover { transform: translateY(-3px); background: #efe6db; }
+        .writer-section { background: #fff9f0; padding: 28px 32px; border-radius: 24px; border-left: 4px solid #bc9a6c; margin: 20px 0 32px; transition: all 0.3s ease; cursor: pointer; }
+        .writer-section:hover { background: #fff7ea; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transform: translateX(4px); border-left-color: #9b6a5c; }
+        .writer-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 16px; color: #2b2b28; transition: color 0.2s; }
+        .writer-section:hover h3 { color: #9b6a5c; }
+        .writer-section p { margin-bottom: 14px; line-height: 1.6; color: #4a4842; }
+        .writer-section strong { color: #9b6a5c; }
+        .writer-hint { margin-top: 12px; font-size: 0.75rem; color: #bc9a6c; opacity: 0; transition: opacity 0.2s; text-align: right; }
+        .writer-section:hover .writer-hint { opacity: 1; }
+        .back-link { margin: 20px 0 60px; }
+        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.9rem; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+        @media (max-width: 600px) {
+            .book-page-layout { flex-direction: column; align-items: center; gap: 20px; }
+            .book-cover-small { width: 160px; }
+            .book-cover-small img { width: 160px; }
+            .book-title { font-size: 1.7rem; text-align: center; }
+            .book-author { text-align: center; }
+            .value-chips { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="#">О проекте</a>
+        <a href="#">История / древняя проза</a>
+        <a href="index.html#goals">Цели и задачи</a>
+        <a href="index.html#writersGrid">Писатели</a>
+        <a href="books.html">Произведения</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <span class="value-word value-1">Вера</span>
+                <span class="value-word value-2">Добро</span>
+                <span class="value-word value-3">Справедливость</span>
+                <span class="value-word value-4">Совесть</span>
+                <span class="value-word value-5">Любовь</span>
+                <span class="value-word value-6">Честь</span>
+                <span class="value-word value-7">Семья</span>
+                <span class="value-word value-8">Патриотизм</span>
+                <span class="value-word value-9">Красота</span>
+                <span class="value-word value-10">Милосердие</span>
+                <span class="value-word value-11">Смирение</span>
+            </div>
+        </div>
+        <div class="book-page-layout">
+            <div class="book-cover-small">
+                <img src="гранатовый браслет.jpg" alt="Куприн - Гранатовый браслет">
+            </div>
+            <div class="book-text-content">
+                <h1 class="book-title">Гранатовый браслет</h1>
+                <p class="book-author">Александр Куприн (1870–1938)</p>
+                <div class="book-description">
+                    <p>«Гранатовый браслет» — удивительная история о чистой, бескорыстной и всепоглощающей любви. Куприн показывает, что настоящая любовь не требует взаимности — она самодостаточна и возвышенна.</p>
+                    <div class="value-chips">
+                        <span class="chip">Любовь</span>
+                        <span class="chip">Смирение</span>
+                        <span class="chip">Верность</span>
+                        <span class="chip">Благородство</span>
+                        <span class="chip">Сострадание</span>
+                    </div>
+                    <p><strong>Любовь как высшая ценность</strong> — главная мысль повести. Желтков любит без надежды на ответ, и это чувство становится для него смыслом жизни. Куприн утверждает, что такая любовь — редчайший дар, «великое счастье».</p>
+                    <p>Повесть учит нас ценить искренние чувства, быть благодарными за любовь, даже если она безответна, и не осуждать тех, кто любит сильнее нас.</p>
+                </div>
+            </div>
+        </div>
+        <div class="writer-section" id="writerSection">
+            <h3> Об Александре Куприне</h3>
+            <p>Александр Иванович Куприн — мастер психологического портрета и тонкий ценитель человеческих душ. Он писал о любви, чести, достоинстве «маленького человека» и вечных ценностях.</p>
+            <p>«Гранатовый браслет» считается одним из лучших произведений о любви в русской литературе. Сам Куприн называл эту повесть «сладкой» и очень личной для себя.</p>
+            <p><strong>Духовный урок Куприна:</strong> любовь не требует награды. Умение любить бескорыстно — признак высокой души.</p>
+            <div class="writer-hint">→ Подробнее об авторе</div>
+        </div>
+        <div class="back-link">
+            <a href="books.html" class="back-button">← Ко всем произведениям</a>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+    document.getElementById('writerSection')?.addEventListener('click', () => alert('Скоро страница об Александре Куприне '));
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-content { max-width: 800px; margin: 48px auto; }
+        .about-content h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 24px; color: #2b2b28; }
+        .about-content h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin: 32px 0 16px; color: #9b6a5c; }
+        .about-content p { line-height: 1.7; margin-bottom: 20px; color: #2f2e2a; }
+        .about-content ul { margin: 20px 0 20px 24px; }
+        .about-content li { margin-bottom: 10px; line-height: 1.6; color: #2f2e2a; }
+        .values-box { background: #f8f5ef; padding: 24px 32px; border-radius: 24px; margin: 32px 0; }
+        .values-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 16px; }
+        .back-link { margin: 40px 0 60px; text-align: center; }
+        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="history.html">История / древняя проза</a>
+        <a href="index.html#goals">Цели и задачи</a>
+        <a href="index.html#writersGrid">Писатели</a>
+        <a href="books.html">Произведения</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <span class="value-word value-1">Вера</span>
+                <span class="value-word value-2">Добро</span>
+                <span class="value-word value-3">Справедливость</span>
+                <span class="value-word value-4">Совесть</span>
+                <span class="value-word value-5">Любовь</span>
+                <span class="value-word value-6">Честь</span>
+                <span class="value-word value-7">Семья</span>
+                <span class="value-word value-8">Патриотизм</span>
+                <span class="value-word value-9">Красота</span>
+                <span class="value-word value-10">Милосердие</span>
+                <span class="value-word value-11">Смирение</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <h1>О проекте</h1>
+            <p>Наш проект посвящён древнерусской прозе — бесценному наследию, которое помогает глубже понять истоки отечественной культуры, традиции и мировоззрение наших предков.</p>
+            <p>Мы стремимся сделать древнерусскую литературу доступной и интересной широкому кругу читателей: от школьников и студентов до всех, кто ценит историю и слово.</p>
+
+            <h2>Что вы найдёте на нашем сайте</h2>
+            <ul>
+                <li>оригинальные тексты древнерусских произведений с удобной навигацией;</li>
+                <li>комментарии и пояснения к устаревшим словам и выражениям;</li>
+                <li>статьи об истории создания памятников древнерусской литературы;</li>
+                <li>материалы о культурных и исторических контекстах эпохи;</li>
+                <li>подборки цитат и ключевых идей, раскрывающих нравственные ценности Древней Руси.</li>
+            </ul>
+
+            <div class="values-box">
+                <h3> Наши ценности</h3>
+                <p><strong>Духовность</strong> — стремление к осмыслению высших целей бытия, опора на нравственные идеалы и веру.</p>
+                <p><strong>Патриотизм</strong> — любовь к Родине, готовность защищать её и служить ей.</p>
+                <p><strong>Мудрость</strong> — ценность знания, опыта и рассудительности.</p>
+            </div>
+
+            <p>Наш проект — это не просто библиотека текстов, а пространство для осмысления вечных ценностей, запечатлённых в древнерусской словесности. Мы верим, что знакомство с этими произведениями обогащает внутренний мир человека, помогает найти ответы на важные жизненные вопросы и укрепляет связь поколений.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html" class="back-button">← На главную</a>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>
