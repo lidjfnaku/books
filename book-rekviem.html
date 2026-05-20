@@ -182,6 +182,24 @@
                 justify-content: center;
             }
         }
+       
+
+.full-text-button {
+    display: inline-block;
+    background: #9b6a5c;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(155,106,92,0.2);
+}
+.full-text-button:hover {
+    background: #7e5548;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(155,106,92,0.3);
+}
     </style>
 </head>
 <body>
@@ -191,10 +209,11 @@
     <div class="dropdown-menu" id="dropdownMenu">
         <a href="index.html">Главная</a>
         <a href="about.html">О проекте</a>
-        <a href="history.html">История / древняя проза</a>
-        <a href="index.html#goals">Цели и задачи</a>
-        <a href="index.html#writersGrid">Писатели</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
         <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
     </div>
 </div>
 
@@ -220,10 +239,11 @@
                 <p class="book-author">Анна Ахматова (1889–1966)</p>
                 <div class="book-description">
                     <p>«Реквием» — не просто поэма. Это крик души, <strong>памятник тысячам невинных жертв</strong>, прошедших через ад сталинских репрессий. Ахматова писала его на протяжении почти 30 лет, зная, что ни при жизни, ни долгие годы после её имя не сможет стоять под этими строками.</p>
+                    <h3> Духовные ценности в творчестве</h3>
                     <div class="value-chips">
                         <span class="chip">Память</span>
                         <span class="chip">Сострадание</span>
-                        <span class="chip">Совесть</span>
+                       <a href="value-sovest.html" class="chip">Совесть</a>s
                         <span class="chip">Любовь материнская</span>
                         <span class="chip">Смирение</span>
                     </div>
@@ -233,7 +253,7 @@
             </div>
         </div>
 
-        <!-- БЛОК О ПИСАТЕЛЕ — КЛИКАБЕЛЬНЫЙ И ВЫДЕЛЯЕТСЯ -->
+        
         <div class="writer-section" id="writerSection">
             <h3>Об Анне Ахматовой</h3>
             <p>Анна Андреевна Ахматова — одна из величайших поэтов Серебряного века. Её называют «голосом эпохи»: в её стихах отразились и любовь, и война, и репрессии, и несгибаемая вера в человека.</p>
@@ -241,11 +261,15 @@
             <p><strong>Духовный урок Ахматовой:</strong> правда выше страха; память — священна; поэзия может быть молитвой и памятником одновременно.</p>
             <div class="writer-hint">→ Подробнее об авторе </div>
         </div>
-
-        <div class="back-link">
+            <div class="full-text-link-wrapper">
+    <a href="rekviem-full.html" class="full-text-button" target="_blank"> Читать полный текст «Реквиема»</a>
+</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
             <a href="books.html" class="back-button">← Ко всем произведениям</a>
+            <a href="book-granatoviy.html" class="back-button">→ Гранатовый браслет</a>
         </div>
     </div>
+    
 </main>
 
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цели и задачи | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .goals-page { max-width: 800px; margin: 48px auto; }
+        .goals-page h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #2b2b28; text-align: center; margin-bottom: 16px; }
+        .goals-page .sub { text-align: center; color: #5e5b55; margin-bottom: 48px; }
+        .goal-card { background: #f8f5ef; border-radius: 24px; padding: 32px; margin-bottom: 32px; }
+        .goal-card h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #9b6a5c; margin-bottom: 20px; }
+        .goal-card p { line-height: 1.7; margin-bottom: 16px; }
+        .goal-card ul { margin-left: 24px; }
+        .goal-card li { margin-bottom: 12px; line-height: 1.5; }
+        .back-link { margin: 48px 0 60px; text-align: center; }
+        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
+        <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <a href="value-vera.html" class="value-link value-1">Вера</a>
+                <a href="value-dobro.html" class="value-link value-2">Добро</a>
+                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
+                <a href="value-love.html" class="value-link value-5">Любовь</a>
+                <a href="value-semia.html" class="value-link value-7">Семья</a>
+                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
+            </div>
+        </div>
+
+        <div class="goals-page">
+            <h1>Цели и задачи проекта</h1>
+            <div class="sub">Духовно-нравственные ценности через российскую литературу Серебряного века</div>
+
+            <div class="goal-card">
+                <h2> Цель</h2>
+                <p>Познакомить целевую аудиторию с традиционными духовно-нравственными ценностями России через призму национальной культуры и способствовать их популяризации.</p>
+                <p><strong>Особая миссия:</strong> чтобы молодёжь не забывала культуру и традиции нашей страны.</p>
+            </div>
+
+            <div class="goal-card">
+                <h2> Задачи</h2>
+                <ul>
+                    <li>Изучить и систематизировать ключевые традиционные ценности, отражённые в литературе Серебряного века</li>
+                    <li>Популяризировать ценности через культуру и искусство</li>
+                    <li>Создать просветительский сайт с интерактивными материалами</li>
+                    <li>Просветить аудиторию молодёжи, привлечь внимание к классическому наследию</li>
+                    <li>Измерить уровень осведомлённости до и после проекта</li>
+                </ul>
+            </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+                <a href="index.html" class="back-button">← На главную</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>

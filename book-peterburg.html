@@ -36,18 +36,21 @@
             .book-author { text-align: center; }
             .value-chips { justify-content: center; }
         }
+
+        
     </style>
 </head>
 <body>
 <div class="top-bar">
     <button class="three-dots" id="dotsBtn">⋯</button>
     <div class="dropdown-menu" id="dropdownMenu">
-       <a href="index.html">Главная</a>
+        <a href="index.html">Главная</a>
         <a href="about.html">О проекте</a>
-        <a href="history.html">История / древняя проза</a>
-        <a href="index.html#goals">Цели и задачи</a>
-        <a href="index.html#writersGrid">Писатели</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
         <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
     </div>
 </div>
 <main>
@@ -71,9 +74,10 @@
                 <p class="book-author">Андрей Белый (1880–1934)</p>
                 <div class="book-description">
                     <p>«Петербург» — главный роман русского символизма, мистический и загадочный. Город предстаёт не просто местом действия, а живым существом, которое влияет на судьбы героев.</p>
+                    <h3> Духовные ценности в творчестве</h3>
                     <div class="value-chips">
                         <span class="chip">Идентичность</span>
-                        <span class="chip">Совесть</span>
+                        <a href="value-sovest.html" class="chip">Совесть</a>
                         <span class="chip">Долг</span>
                         <span class="chip">Отчаяние</span>
                         <span class="chip">Поиск смысла</span>
@@ -90,10 +94,15 @@
             <p><strong>Духовный урок Белого:</strong> реальность многомерна, и за видимым хаосом всегда есть высший смысл.</p>
             <div class="writer-hint">→ Подробнее об авторе </div>
         </div>
-        <div class="back-link">
+         <div class="full-text-link-wrapper">
+            <a href="peterburg-full.html" class="full-text-button" target="_blank"> Читать полный текст «Петербург»</a>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
             <a href="books.html" class="back-button">← Ко всем произведениям</a>
+            <a href="book-melkiy-bes.html" class="back-button">→ Мелкий бес</a>
         </div>
     </div>
+    
 </main>
 <footer class="footer">
     <div class="container">

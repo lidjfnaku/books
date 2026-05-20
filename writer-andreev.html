@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Николай Лесков — писатель | Серебряный век</title>
+    <title>Леонид Андреев — писатель | Серебряный век</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .writer-page { display: flex; gap: 48px; margin: 40px 0; flex-wrap: wrap; }
         .writer-photo { flex-shrink: 0; width: 280px; }
         .writer-photo img { width: 100%; height: auto; border-radius: 20px; box-shadow: 8px 12px 24px rgba(0,0,0,0.12); }
-        .writer-info { flex: 1; min-width: 250px; }
-        .writer-name { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 500; color: #2b2b28; margin-bottom: 8px; }
+        .writer-info { flex: 1; }
+        .writer-name { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #2b2b28; margin-bottom: 8px; }
         .writer-years { font-size: 1.1rem; color: #9b6a5c; margin-bottom: 24px; border-bottom: 1px solid #e8e2d4; padding-bottom: 12px; }
-        .writer-values { background: #f8f5ef; padding: 20px 24px; border-radius: 20px; margin: 24px 0; }
-        .writer-values h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 12px; color: #2b2b28; }
-        .value-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
-        .value-tag { background: white; padding: 5px 16px; border-radius: 30px; font-size: 0.85rem; color: #9b6a5c; border: 1px solid #dccfbc; }
-        .writer-quote { background: #fff9f0; padding: 20px 28px; border-radius: 20px; border-left: 4px solid #bc9a6c; margin: 24px 0; font-style: italic; color: #4a4842; }
-        .map-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 12px; color: #2b2b28; }
-        iframe { width: 100%; height: 300px; border: 0; }
+        .values-block { background: #f8f5ef; padding: 20px 24px; border-radius: 20px; margin: 24px 0; }
+        .values-block h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
+        .value-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+        .value-list a { background: white; padding: 5px 16px; border-radius: 30px; font-size: 0.85rem; color: #9b6a5c; border: 1px solid #dccfbc; text-decoration: none; transition: all 0.2s; }
+        .value-list a:hover { background: #9b6a5c; color: white; transform: translateY(-2px); }
+        .poem-block { background: #fff9f0; padding: 20px 24px; border-radius: 20px; margin: 24px 0; border-left: 4px solid #bc9a6c; }
+        .poem-block h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #9b6a5c; margin-bottom: 12px; }
+        .poem-text { font-style: italic; color: #4a4842; line-height: 1.6; }
         .back-link { margin: 40px 0 60px; }
         .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
         .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
-        @media (max-width: 700px) {
-            .writer-page { flex-direction: column; align-items: center; }
-            .writer-photo { width: 220px; }
-            .writer-name { font-size: 1.8rem; text-align: center; }
-            .writer-years { text-align: center; }
-        }
+        @media (max-width: 700px) { .writer-page { flex-direction: column; align-items: center; } .writer-photo { width: 220px; } .writer-name { font-size: 1.8rem; text-align: center; } }
     </style>
 </head>
 <body>
 <div class="top-bar">
     <button class="three-dots" id="dotsBtn">⋯</button>
     <div class="dropdown-menu" id="dropdownMenu">
-       <a href="index.html">Главная</a>
+        <a href="index.html">Главная</a>
         <a href="about.html">О проекте</a>
         <a href="goals.html">Цели и задачи</a>
         <a href="writers.html">Писатели</a>
@@ -59,36 +55,37 @@
 
         <div class="writer-page">
             <div class="writer-photo">
-                <img src="лесков.jpg" alt="Николай Лесков">
+                <img src="андреев.webp" alt="Леонид Андреев">
             </div>
             <div class="writer-info">
-                <h1 class="writer-name">Николай Лесков</h1>
-                <p class="writer-years">1831–1895 | Прозаик, публицист</p>
-                
-                <div class="writer-values">
+                <h1 class="writer-name">Леонид Андреев</h1>
+                <p class="writer-years">1871–1919 | Прозаик, драматург</p>
+
+                <div class="values-block">
                     <h3> Духовные ценности в творчестве</h3>
-                    <div class="value-tags">
-                        <span class="value-tag">Праведничество</span>
-                        <span class="value-tag">Покаяние</span>
-                        <span class="value-tag">Служение людям</span>
-                        <span class="value-tag">Вера</span>
-                        <span class="value-tag">Доброта</span>
-                        <span class="value-tag">Справедливость</span>
+                    <div class="value-list">
+                        <a href="value-sovest.html">Совесть</a>
+                        <a href="value-dobro.html">Добро</a>
+                        <a href="value-love.html">Любовь</a>
                     </div>
-                    <p>Лесков создавал образы «праведников» — людей, чья нравственная сила проявляется в повседневных поступках. Он утверждал, что истинная вера выражается через дела милосердия, а путь к духовному совершенству лежит через осознание ошибок и стремление их исправить.</p>
+                    <p>Андреев исследовал тёмные глубины человеческой души, показывая, что добро и зло часто переплетены. Он ставил перед читателем сложные нравственные вопросы, не давая однозначных ответов, и призывал к состраданию даже к тем, кого принято осуждать.</p>
                 </div>
 
-                <div class="writer-quote">
-                    «Праведники — это люди, которые не могут согрешить, потому что их душа не принимает греха.»
+                <div class="poem-block">
+                    <h4> Совесть в творчестве Андреева</h4>
+                    <div class="poem-text">«Самое страшное наказание — это не тюрьма, а когда твоя собственная совесть начинает тебя судить. И этот суд самый справедливый.»</div>
                 </div>
 
-                
+                <div class="poem-block">
+                    <h4> Добро в творчестве Андреева</h4>
+                    <div class="poem-text">«Надо быть добрым, надо быть милосердным, надо прощать. Это главное.»</div>
+                </div>
             </div>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
             <a href="writers.html" class="back-button">← Ко всем писателям</a>
-            <a href="writer-sologub.html" class="back-button">→ Сологуб  </a>
+             <a href="books.html" class="next-button">→ К произведениям </a>
         </div>
     </div>
 </main>

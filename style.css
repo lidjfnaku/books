@@ -353,3 +353,74 @@ html {
 .value-link {
     text-decoration: none;  /* ← ЭТО УБИРАЕТ ПОДЧЁРКИВАНИЕ */
 }
+body {
+    font-size: 18px;  /* было 16px */
+}
+
+.container {
+    font-size: 1.05rem;
+}
+.next-section { text-align: center; margin: 32px 0 48px; }
+.next-button { display: inline-block; padding: 10px 28px; background: transparent; border: 1px solid #bc9a6c; border-radius: 40px; color: #9b6a5c; text-decoration: none; transition: all 0.2s; }
+.next-button:hover { background: #f3efe8; transform: translateX(4px); }
+/* две кнопки в одной строке */
+.double-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0 60px;
+    flex-wrap: wrap;
+}
+
+.back-button, .next-button {
+    display: inline-block;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #d9cdbb;
+    border-radius: 40px;
+    color: #7e6f5c;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.back-button:hover {
+    background: #f3efe8;
+    border-color: #bc9a6c;
+    color: #9b6a5c;
+    transform: translateX(-4px);
+}
+
+.next-button:hover {
+    background: #f3efe8;
+    border-color: #bc9a6c;
+    color: #9b6a5c;
+    transform: translateX(4px);
+}
+
+/* на мобильных кнопки друг под другом */
+@media (max-width: 550px) {
+    .double-buttons {
+        flex-direction: column;
+    }
+    .back-button:hover, .next-button:hover {
+        transform: translateX(0);
+    }
+}
+.full-text-button {
+    display: inline-block;
+    background: #9b6a5c;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(155,106,92,0.2);
+}
+.full-text-button:hover {
+    background: #7e5548;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(155,106,92,0.3);
+}

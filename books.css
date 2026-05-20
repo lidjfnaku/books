@@ -132,3 +132,23 @@
         font-size: 0.8rem;
     }
 }
+.full-text-link-wrapper {
+    text-align: center;
+    margin: 24px 0 16px;
+}
+.full-text-button {
+    display: inline-block;
+    background: #9b6a5c;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(155,106,92,0.2);
+}
+.full-text-button:hover {
+    background: #7e5548;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(155,106,92,0.3);
+}

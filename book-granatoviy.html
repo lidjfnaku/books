@@ -36,18 +36,35 @@
             .book-author { text-align: center; }
             .value-chips { justify-content: center; }
         }
+        .full-text-button {
+    display: inline-block;
+    background: #9b6a5c;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(155,106,92,0.2);
+}
+.full-text-button:hover {
+    background: #7e5548;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(155,106,92,0.3);
+}
     </style>
 </head>
 <body>
 <div class="top-bar">
     <button class="three-dots" id="dotsBtn">⋯</button>
     <div class="dropdown-menu" id="dropdownMenu">
-       <a href="index.html">Главная</a>
+         <a href="index.html">Главная</a>
         <a href="about.html">О проекте</a>
-        <a href="history.html">История / древняя проза</a>
-        <a href="index.html#goals">Цели и задачи</a>
-        <a href="index.html#writersGrid">Писатели</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
         <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
     </div>
 </div>
 <main>
@@ -71,8 +88,9 @@
                 <p class="book-author">Александр Куприн (1870–1938)</p>
                 <div class="book-description">
                     <p>«Гранатовый браслет» — удивительная история о чистой, бескорыстной и всепоглощающей любви. Куприн показывает, что настоящая любовь не требует взаимности — она самодостаточна и возвышенна.</p>
+                    <h3> Духовные ценности в творчестве</h3>
                     <div class="value-chips">
-                        <span class="chip">Любовь</span>
+                        <a href="value-love.html" class="chip">Любовь</a>
                         <span class="chip">Смирение</span>
                         <span class="chip">Верность</span>
                         <span class="chip">Благородство</span>
@@ -90,10 +108,15 @@
             <p><strong>Духовный урок Куприна:</strong> любовь не требует награды. Умение любить бескорыстно — признак высокой души.</p>
             <div class="writer-hint">→ Подробнее об авторе</div>
         </div>
-        <div class="back-link">
+         <div class="full-text-link-wrapper">
+    <a href="granatoviy-full.html" class="full-text-button" target="_blank"> Читать полный текст «Гранатовый браслет»</a>
+</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
             <a href="books.html" class="back-button">← Ко всем произведениям</a>
+            <a href="book-strannik.html" class="back-button">→ Очаровательный странник</a>
         </div>
     </div>
+   
 </main>
 <footer class="footer">
     <div class="container">

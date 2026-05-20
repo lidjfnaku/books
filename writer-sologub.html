@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фёдор Сологуб — писатель | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .writer-page { display: flex; gap: 48px; margin: 40px 0; flex-wrap: wrap; }
+        .writer-photo { flex-shrink: 0; width: 280px; }
+        .writer-photo img { width: 100%; height: auto; border-radius: 20px; box-shadow: 8px 12px 24px rgba(0,0,0,0.12); background: #e7e0d3; }
+        .writer-info { flex: 1; }
+        .writer-name { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #2b2b28; margin-bottom: 8px; }
+        .writer-years { font-size: 1.1rem; color: #9b6a5c; margin-bottom: 24px; border-bottom: 1px solid #e8e2d4; padding-bottom: 12px; }
+        .values-block { background: #f8f5ef; padding: 20px 24px; border-radius: 20px; margin: 24px 0; }
+        .values-block h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 16px; }
+        .value-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+        .value-list a { background: white; padding: 5px 16px; border-radius: 30px; font-size: 0.85rem; color: #9b6a5c; border: 1px solid #dccfbc; text-decoration: none; transition: all 0.2s; }
+        .value-list a:hover { background: #9b6a5c; color: white; transform: translateY(-2px); }
+        .poem-block { background: #fff9f0; padding: 20px 24px; border-radius: 20px; margin: 24px 0; border-left: 4px solid #bc9a6c; }
+        .poem-block h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #9b6a5c; margin-bottom: 12px; }
+        .poem-text { font-style: italic; color: #4a4842; line-height: 1.6; }
+        .double-buttons { display: flex; justify-content: space-between; gap: 20px; margin: 40px 0 60px; flex-wrap: wrap; }
+        .back-button, .next-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.95rem; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+        .next-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(4px); }
+        @media (max-width: 700px) { 
+            .writer-page { flex-direction: column; align-items: center; } 
+            .writer-photo { width: 220px; } 
+            .writer-name { font-size: 1.8rem; text-align: center; }
+            .double-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+       <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
+        <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <a href="value-vera.html" class="value-link value-1">Вера</a>
+                <a href="value-dobro.html" class="value-link value-2">Добро</a>
+                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
+                <a href="value-love.html" class="value-link value-5">Любовь</a>
+                <a href="value-semia.html" class="value-link value-7">Семья</a>
+                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
+            </div>
+        </div>
+
+        <div class="writer-page">
+            <div class="writer-photo">
+                <img src="сологуб.gif" alt="Фёдор Сологуб">
+            </div>
+            <div class="writer-info">
+                <h1 class="writer-name">Фёдор Сологуб</h1>
+                <p class="writer-years">1863–1927 | Поэт, прозаик, драматург, переводчик</p>
+
+                <div class="values-block">
+                    <h3> Духовные ценности в творчестве</h3>
+                    <div class="value-list">
+                        <a href="value-dobro.html">Добро</a>
+                        <a href="value-sovest.html">Совесть</a>
+                        <a href="value-vera.html">Вера</a>
+                        <a href="value-love.html">Любовь</a>
+                    </div>
+                    <p>Сологуб обличал пошлость, мещанство и нравственную деградацию. Он показывал опасность утраты духовных ориентиров и призывал к внутренней работе над собой ради сохранения человечности. Его творчество — это борьба света и тьмы в человеческой душе.</p>
+                </div>
+
+                <div class="poem-block">
+                    <h4> Добро в творчестве Сологуба</h4>
+                    <div class="poem-text">«Я — бог таинственного мира, Весь мир — в одних моих мечтах. Но добро — это свет, который я несу другим.»</div>
+                </div>
+
+                <div class="poem-block">
+                    <h4> Совесть в творчестве Сологуба</h4>
+                    <div class="poem-text">«Совесть — это голос Бога в человеке. Не заглушай его суетой мира.»</div>
+                </div>
+
+                <div class="poem-block">
+                    <h4> Вера в творчестве Сологуба</h4>
+                    <div class="poem-text">«Верую в добро, в правду, в красоту. Верую, что человек может стать лучше.»</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+            <a href="writers.html" class="back-button">← Ко всем писателям</a>
+            <a href="writer-andreev.html" class="next-button">→ Андреев </a>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Писатели Серебряного века | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .writers-page-header { text-align: center; margin: 48px 0 32px; }
+        .writers-page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #2b2b28; margin-bottom: 12px; }
+        .writers-page-header p { color: #5e5b55; font-size: 1.1rem; }
+        .writers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px; margin: 40px 0 80px; }
+        .writer-card { background: white; border-radius: 28px; overflow: hidden; transition: all 0.25s; box-shadow: 0 6px 14px rgba(0,0,0,0.02); border: 1px solid #ece5db; text-decoration: none; color: inherit; display: block; }
+        .writer-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08); border-color: #d9cdbb; }
+        .writer-img { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: #e7e0d3; }
+        .writer-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .writer-info { padding: 20px 20px 24px; }
+        .writer-name { font-size: 1.45rem; font-weight: 500; font-family: 'Playfair Display', serif; margin-bottom: 8px; transition: color 0.2s; }
+        .writer-card:hover .writer-name { color: #9b6a5c; }
+        .writer-years { font-size: 0.85rem; color: #9b8e7a; margin-bottom: 12px; }
+        .writer-desc { font-size: 0.9rem; color: #4a4842; line-height: 1.4; }
+        .back-link { margin: 40px 0 60px; text-align: center; }
+        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+        @media (max-width: 700px) {
+            .writers-grid { gap: 20px; }
+            .writer-name { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+       <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="writers.html">Писатели</a>
+        <a href="books.html">Произведения</a>
+        <a href="team.html">Участники</a>
+        <a href="bibliography.html">Библиография</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <a href="value-vera.html" class="value-link value-1">Вера</a>
+                <a href="value-dobro.html" class="value-link value-2">Добро</a>
+                <span class="value-word value-3">Справедливость</span>
+                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
+                <a href="value-love.html" class="value-link value-5">Любовь</a>
+                <span class="value-word value-6">Честь</span>
+                <a href="value-semia.html" class="value-link value-7">Семья</a>
+                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
+                <span class="value-word value-9">Красота</span>
+                <span class="value-word value-10">Милосердие</span>
+                <span class="value-word value-11">Смирение</span>
+            </div>
+        </div>
+
+        <div class="writers-page-header">
+            <h1> Писатели Серебряного века</h1>
+            <p>Поэты и прозаики, чьё творчество стало воплощением духовно-нравственных ценностей России</p>
+        </div>
+
+        <div class="writers-grid">
+            <!-- Анна Ахматова -->
+            <a href="writer-akhmatova.html" class="writer-card">
+                <div class="writer-img"><img src="ахматова.webp" alt="Анна Ахматова"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Анна Ахматова</div>
+                    <div class="writer-years">1889–1966</div>
+                    <div class="writer-desc">Поэзия чести, страдания, любви и несломленного духа</div>
+                </div>
+            </a>
+
+            <!-- Иван Бунин -->
+            <a href="writer-bunin.html" class="writer-card">
+                <div class="writer-img"><img src="бунин.webp" alt="Иван Бунин"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Иван Бунин</div>
+                    <div class="writer-years">1870–1953</div>
+                    <div class="writer-desc">Тончайший лирик, мастер «дворянских гнёзд» и памяти о России</div>
+                </div>
+            </a>
+
+            <!-- Андрей Белый -->
+            <a href="writer-bely.html" class="writer-card">
+                <div class="writer-img"><img src="белый.jpg" alt="Андрей Белый"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Андрей Белый</div>
+                    <div class="writer-years">1880–1934</div>
+                    <div class="writer-desc">Символист, искатель духовного преображения и нового человека</div>
+                </div>
+            </a>
+
+            <!-- Александр Куприн -->
+            <a href="writer-kuprin.html" class="writer-card">
+                <div class="writer-img"><img src="курин.webp" alt="Александр Куприн"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Александр Куприн</div>
+                    <div class="writer-years">1870–1938</div>
+                    <div class="writer-desc">Сочувствие «маленькому человеку», вера в любовь и доброту</div>
+                </div>
+            </a>
+
+            <!-- Александр Блок -->
+            <a href="writer-blok.html" class="writer-card">
+                <div class="writer-img"><img src="блок.jpg" alt="Александр Блок"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Александр Блок</div>
+                    <div class="writer-years">1880–1921</div>
+                    <div class="writer-desc">Поэт Прекрасной Дамы, Россия как стихия и судьба</div>
+                </div>
+            </a>
+
+            <!-- Сергей Есенин -->
+            <a href="writer-esenin.html" class="writer-card">
+                <div class="writer-img"><img src="есенин.jpg" alt="Сергей Есенин"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Сергей Есенин</div>
+                    <div class="writer-years">1895–1925</div>
+                    <div class="writer-desc">Голос деревни, любовь к родной земле и живая душа Руси</div>
+                </div>
+            </a>
+
+            <!-- Николай Лесков -->
+            <a href="writer-leskov.html" class="writer-card">
+                <div class="writer-img"><img src="лесков.jpg" alt="Николай Лесков"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Николай Лесков</div>
+                    <div class="writer-years">1831–1895</div>
+                    <div class="writer-desc">Праведники, народный быт и сокровища русского духа</div>
+                </div>
+            </a>
+
+            <!-- Фёдор Сологуб -->
+            <a href="writer-sologub.html" class="writer-card">
+                <div class="writer-img"><img src="сологуб.gif" alt="Фёдор Сологуб"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Фёдор Сологуб</div>
+                    <div class="writer-years">1863–1927</div>
+                    <div class="writer-desc">Певец «мелкого беса», исследователь тёмных сторон души</div>
+                </div>
+            </a>
+
+            <!-- Леонид Андреев -->
+            <a href="writer-andreev.html" class="writer-card">
+                <div class="writer-img"><img src="андреев.webp" alt="Леонид Андреев"></div>
+                <div class="writer-info">
+                    <div class="writer-name">Леонид Андреев</div>
+                    <div class="writer-years">1871–1919</div>
+                    <div class="writer-desc">Мастер психологической драмы, певец «бездны» человеческой души</div>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+             <a href="index.html" class="back-button">← На главную</a>
+             <a href="books.html" class="next-button">→ К произведениям </a>
+        </div>
+       
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>

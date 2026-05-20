@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиография и источники | Серебряный век</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bibliography-page {
+            max-width: 1000px;
+            margin: 48px auto;
+        }
+        .bibliography-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .bibliography-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #2b2b28;
+            margin-bottom: 12px;
+        }
+        .bibliography-header p {
+            color: #5e5b55;
+            font-size: 1.1rem;
+        }
+        .source-category {
+            margin-bottom: 48px;
+        }
+        .source-category h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #9b6a5c;
+            margin-bottom: 24px;
+            border-left: 4px solid #bc9a6c;
+            padding-left: 20px;
+        }
+        .sources-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .sources-list li {
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .sources-list a {
+            text-decoration: none;
+            color: #2b2b28;
+            font-weight: 500;
+            border-bottom: 1px solid #e8e2d4;
+            transition: all 0.2s;
+        }
+        .sources-list a:hover {
+            color: #9b6a5c;
+            border-bottom-color: #9b6a5c;
+        }
+        .source-description {
+            font-size: 0.85rem;
+            color: #8b8478;
+            margin-left: 16px;
+        }
+        .double-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 48px 0 60px;
+            flex-wrap: wrap;
+        }
+        .back-button, .next-button {
+            display: inline-block;
+            padding: 10px 24px;
+            background: transparent;
+            border: 1px solid #d9cdbb;
+            border-radius: 40px;
+            color: #7e6f5c;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .back-button:hover {
+            background: #f3efe8;
+            border-color: #bc9a6c;
+            color: #9b6a5c;
+            transform: translateX(-4px);
+        }
+        .next-button:hover {
+            background: #f3efe8;
+            border-color: #bc9a6c;
+            color: #9b6a5c;
+            transform: translateX(4px);
+        }
+        @media (max-width: 700px) {
+            .bibliography-header h1 { font-size: 2rem; }
+            .source-category h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <button class="three-dots" id="dotsBtn">⋯</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="goals.html">Цели и задачи</a>
+        <a href="team.html">Участники</a>
+        <a href="writers.html">Писатели</a>
+        <a href="books.html">Произведения</a>
+        <a href="bibliography.html">Библиография</a>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="values-header">
+            <div class="values-cloud">
+                <a href="value-vera.html" class="value-link value-1">Вера</a>
+                <a href="value-dobro.html" class="value-link value-2">Добро</a>
+                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
+                <a href="value-love.html" class="value-link value-5">Любовь</a>
+                <a href="value-semia.html" class="value-link value-7">Семья</a>
+                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
+            </div>
+        </div>
+
+        <div class="bibliography-page">
+            <div class="bibliography-header">
+                <h1>Библиография и источники</h1>
+            </div>
+
+            <div class="source-category">
+                <h2> Культура и искусство</h2>
+                <ul class="sources-list">
+                    <li><a href="https://www.culture.ru/" target="_blank" rel="noopener noreferrer">Культура.РФ</a> <span class="source-description">— портал о культурном наследии и традициях России</span></li>
+                </ul>
+            </div>
+
+            
+
+            <div class="source-category">
+                <h2> Анализ произведений</h2>
+                <ul class="sources-list">
+                    <li><a href="https://infourok.ru/user/medvedeva-anna-aleksandrovna1/blog/s-a-esenin-ne-zhaleyu-ne-zovu-ne-plachu-analiz-stihotvoreniya-68764.html" target="_blank" rel="noopener noreferrer">С. А. Есенин — «Не жалею, не зову, не плачу» (анализ)</a> <span class="source-description">— разбор стихотворения</span></li>
+                    <li><a href="https://www.vokrugsveta.ru/articles/analiz-poemy-a-bloka-dvenadcat-o-chem-ona-i-kuda-vedet-geroev-isus-id6193250/" target="_blank" rel="noopener noreferrer">Анализ поэмы А. Блока «Двенадцать»</a> <span class="source-description">— журнал «Вокруг света»</span></li>
+                    <li><a href="https://kopilkaurokov.ru/literatura/uroki/granatovyi_braslet_a_i_kuprina_utverzhdenie_liubvi_kak_vysshei_tsennosti_tragizm" target="_blank" rel="noopener noreferrer">А. И. Куприн «Гранатовый браслет» — урок</a> <span class="source-description">— утверждение любви как высшей ценности</span></li>
+                    <li><a href="https://interneturok.ru/lesson/literatura/11-klass/a-a-ahmatova/a-a-ahmatova-tvorcheskiy-portret-lirika-poema-rekviem-chast-3-analiz-poemy-rekviem" target="_blank" rel="noopener noreferrer">А. А. Ахматова — анализ поэмы «Реквием»</a> <span class="source-description">— видеоурок и конспект</span></li>
+                </ul>
+            </div>
+
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+                <a href="index.html" class="back-button">← На главную</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+    </div>
+</footer>
+<script>
+    const dotsBtn = document.getElementById('dotsBtn');
+    const dropdown = document.getElementById('dropdownMenu');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+</script>
+</body>
+</html>
