@@ -276,26 +276,12 @@
 <script>
     const dotsBtn = document.getElementById('dotsBtn');
     const dropdown = document.getElementById('dropdownMenu');
-
-    dotsBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle('show');
+    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
+    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
+    
+    document.getElementById('writerSection')?.addEventListener('click', () => {
+        window.location.href = 'writer-akhmatova.html';
     });
-
-    document.addEventListener('click', (e) => {
-        if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('show');
-        }
-    });
-
-    // Когда нажимаешь на блок об Ахматовой — потом будет переход на отдельную страницу
-    const writerSection = document.getElementById('writerSection');
-    if (writerSection) {
-        writerSection.addEventListener('click', () => {
-            alert('Скоро здесь будет отдельная страница об Анне Ахматовой ');
-            // позже: window.location.href = 'akhmatova.html';
-        });
-    }
 </script>
 </body>
 </html>

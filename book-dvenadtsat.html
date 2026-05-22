@@ -111,7 +111,9 @@
     const dropdown = document.getElementById('dropdownMenu');
     dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
     document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
-    document.getElementById('writerSection')?.addEventListener('click', () => alert('Скоро страница об Александре Блоке '));
-</script>
-</body>
+    
+    document.getElementById('writerSection')?.addEventListener('click', () => {
+        window.location.href = 'writer-blok.html';
+    });
+</script></body>
 </html>

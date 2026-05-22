@@ -90,7 +90,9 @@
             <p>Николай Семёнович Лесков — певец русского праведничества. Он создал галерею образов обычных людей, в которых живёт настоящая святость — без пафоса, но с огромной душой.</p>
             <p>«Очарованный странник» — одно из самых загадочных и глубоких его произведений, где переплелись фольклор, житийная литература и философская притча.</p>
             <p><strong>Духовный урок Лескова:</strong> святость не в безгрешности, а в способности каяться и меняться.</p>
-            <div class="writer-hint">→ Подробнее об авторе </div>
+            <div class="writer-hint">
+                 <a href="writer-leskov.html" style="text-decoration: none; color: #bc9a6c;">→ Подробнее об авторе</a>
+            </div>
         </div>
          <div class="full-text-link-wrapper">
              <a href="strannik-full.html" class="full-text-button" target="_blank"> Читать полный текст «Очаровательный странник»</a>
@@ -111,7 +113,10 @@
     const dropdown = document.getElementById('dropdownMenu');
     dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
     document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
-    document.getElementById('writerSection')?.addEventListener('click', () => alert('Скоро страница о Николае Лескове '));
+    
+    document.getElementById('writerSection')?.addEventListener('click', () => {
+        window.location.href = 'writer-leskov.html';
+    });
 </script>
 </body>
 </html>
