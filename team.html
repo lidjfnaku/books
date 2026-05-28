@@ -14,59 +14,94 @@
         .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px; }
         .team-card { background: white; border-radius: 28px; border: 1px solid #ece5db; overflow: hidden; transition: all 0.25s; text-align: center; padding: 24px 20px 28px; }
         .team-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08); }
-        
-        /* рамка для фото */
         .photo-frame { width: 150px; height: 150px; margin: 0 auto 20px; background: #f3efe8; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
         .photo-placeholder { font-size: 3rem; color: #bc9a6c; opacity: 0.5; }
-        
-        /* для Маськина — кликабельная рамка */
         .clickable-photo { cursor: pointer; transition: all 0.2s; border: 2px dashed #bc9a6c; }
         .clickable-photo:hover { background: #e8e0d5; transform: scale(1.02); }
-        
         .upload-input { display: none; }
-        
         .team-name { font-size: 1.3rem; font-weight: 600; color: #2b2b28; margin-bottom: 6px; }
         .team-role { color: #9b6a5c; font-size: 0.9rem; font-weight: 500; margin-bottom: 12px; }
         .team-desc { font-size: 0.85rem; color: #6f6559; line-height: 1.4; }
-        
         .double-buttons { display: flex; justify-content: space-between; gap: 20px; margin: 48px 0 60px; flex-wrap: wrap; }
-        .back-button, .next-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .back-button, .next-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.95rem; }
         .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
         .next-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(4px); }
-        
-        @media (max-width: 700px) { .team-grid { gap: 20px; } }
+        @media (max-width: 700px) { .team-grid { gap: 20px; } .team-header h1 { font-size: 1.8rem; } }
+        /* ===== НОВАЯ ГОРИЗОНТАЛЬНАЯ ШАПКА ===== */
+.main-header {
+    background: #fefcf5;
+    border-bottom: 1px solid #e8e2d4;
+    padding: 20px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #2b2b28;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    color: #9b6a5c;
+    transform: translateY(-1px);
+}
+
+/* мобильная версия */
+@media (max-width: 700px) {
+    .main-header {
+        padding: 12px 16px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
     </style>
 </head>
 <body>
-<div class="top-bar">
-    <button class="three-dots" id="dotsBtn">⋯</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="goals.html">Цели и задачи</a>
-        <a href="writers.html">Писатели</a>
-        <a href="books.html">Произведения</a>
-        <a href="team.html">Участники</a>
-        <a href="bibliography.html">Библиография</a>
-    </div>
-</div>
+
+<header class="main-header">
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="goals.html" class="nav-link">Цели и задачи</a>
+            <a href="writers.html" class="nav-link">Писатели</a>
+            <a href="books.html" class="nav-link">Произведения</a>
+                        <a href="team.html" class="nav-link">Участники</a>
+            <a href="bibliography.html" class="nav-link">Библиография</a>
+        </div>
+    </nav>
+</header>
+
 <main>
     <div class="container">
-        <div class="values-header">
-            <div class="values-cloud">
-                <a href="value-vera.html" class="value-link value-1">Вера</a>
-                <a href="value-dobro.html" class="value-link value-2">Добро</a>
-                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
-                <a href="value-love.html" class="value-link value-5">Любовь</a>
-                <a href="value-semia.html" class="value-link value-7">Семья</a>
-                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
-            </div>
-        </div>
-
         <div class="team-page">
             <div class="team-header">
                 <h1> Участники проекта</h1>
+                <p>Команда, работающая над сохранением и популяризацией духовно-нравственных ценностей</p>
             </div>
 
             <div class="team-grid">
@@ -117,13 +152,14 @@
                 </div>
             </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+            <div class="double-buttons">
                 <a href="books.html" class="back-button">← К произведениям</a>
-                <a href="bibliography.html" class="next-button">К источникам информации →</a>
+                <a href="bibliography.html" class="next-button">Библиография →</a>
             </div>
         </div>
     </div>
 </main>
+
 <footer class="footer">
     <div class="container">
     </div>
@@ -135,17 +171,14 @@
     dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
     document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
 
-    // функция для загрузки фото (только для Маськина)
     function previewImage(event, frameId, placeholderId) {
         const frame = document.getElementById(frameId);
         const placeholder = document.getElementById(placeholderId);
         const file = event.target.files[0];
-        
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
                 frame.innerHTML = `<img src="${e.target.result}" alt="Фото участника">`;
-                // возвращаем кликабельность — при клике на фото можно заменить
                 frame.onclick = () => document.getElementById('upload-5').click();
             }
             reader.readAsDataURL(file);

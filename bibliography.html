@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Библиография и источники | Серебряный век</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .bibliography-page {
@@ -94,37 +94,81 @@
             .bibliography-header h1 { font-size: 2rem; }
             .source-category h2 { font-size: 1.4rem; }
         }
+        /* ===== НОВАЯ ГОРИЗОНТАЛЬНАЯ ШАПКА ===== */
+.main-header {
+    background: #fefcf5;
+    border-bottom: 1px solid #e8e2d4;
+    padding: 20px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #2b2b28;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    color: #9b6a5c;
+    transform: translateY(-1px);
+}
+
+/* мобильная версия */
+@media (max-width: 700px) {
+    .main-header {
+        padding: 12px 16px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
     </style>
 </head>
 <body>
-<div class="top-bar">
-    <button class="three-dots" id="dotsBtn">⋯</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="goals.html">Цели и задачи</a>
-        <a href="team.html">Участники</a>
-        <a href="writers.html">Писатели</a>
-        <a href="books.html">Произведения</a>
-        <a href="bibliography.html">Библиография</a>
-    </div>
-</div>
+
+<!-- Новая горизонтальная шапка -->
+<header class="main-header">
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="goals.html" class="nav-link">Цели и задачи</a>
+            <a href="writers.html" class="nav-link">Писатели</a>
+            <a href="books.html" class="nav-link">Произведения</a>
+                        <a href="team.html" class="nav-link">Участники</a>
+            <a href="bibliography.html" class="nav-link">Библиография</a>
+        </div>
+    </nav>
+</header>
+
 <main>
     <div class="container">
-        <div class="values-header">
-            <div class="values-cloud">
-                <a href="value-vera.html" class="value-link value-1">Вера</a>
-                <a href="value-dobro.html" class="value-link value-2">Добро</a>
-                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
-                <a href="value-love.html" class="value-link value-5">Любовь</a>
-                <a href="value-semia.html" class="value-link value-7">Семья</a>
-                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
-            </div>
-        </div>
-
         <div class="bibliography-page">
             <div class="bibliography-header">
-                <h1>Библиография и источники</h1>
+                <h1> Библиография и источники</h1>
+                <p>Материалы, которые помогли нам в работе над проектом</p>
             </div>
 
             <div class="source-category">
@@ -134,7 +178,14 @@
                 </ul>
             </div>
 
-            
+            <div class="source-category">
+                <h2>История древнерусской литературы</h2>
+                <ul class="sources-list">
+                    <li><a href="https://azbyka.ru/otechnik/Istorija_Tserkvi/istorija-drevnerusskoj-literatury/12" target="_blank" rel="noopener noreferrer">Азбука веры: История древнерусской литературы</a> <span class="source-description">— обзорный материал по основным памятникам</span></li>
+                    <li><a href="https://old-rus-imli.ru/ru/publikatsii/monografii?start=10" target="_blank" rel="noopener noreferrer">Институт мировой литературы им. А. М. Горького</a> <span class="source-description">— монографии и научные публикации по древнерусской словесности</span></li>
+                    <li><a href="https://elib.gsu.by/bitstream/123456789/2754/1/%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%93%D1%80%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0%2026.11.17.pdf" target="_blank" rel="noopener noreferrer">Гречаникова М. Ю. — Древнерусская литература</a> <span class="source-description">— учебно-методическое пособие (PDF)</span></li>
+                </ul>
+            </div>
 
             <div class="source-category">
                 <h2> Анализ произведений</h2>
@@ -146,22 +197,32 @@
                 </ul>
             </div>
 
+            <div class="source-category">
+                <h2> Тексты произведений и собрания сочинений</h2>
+                <ul class="sources-list">
+                    <li><a href="https://azbyka.ru/fiction/granatovyj-braslet-kuprin/" target="_blank" rel="noopener noreferrer">А. И. Куприн — Гранатовый браслет (полный текст)</a></li>
+                    <li><a href="https://olehnik.ru/files/literatura/А.Блок%20Полное%20собрание%20стихотворений%20.pdf?ysclid=mplfygrai7153163563" target="_blank" rel="noopener noreferrer">А. Блок — Полное собрание стихотворений (PDF)</a> <span class="source-description"></span></li>
+                    <li><a href="https://books.yandex.ru/authors/xP5HStWC" target="_blank" rel="noopener noreferrer">Н. С. Лесков — книги в электронной библиотеке Яндекс Книги</a> <span class="source-description">— произведения, биография</span></li>
+                    <li><a href="https://www.litres.ru/author/leonid-andreev/" target="_blank" rel="noopener noreferrer">Л. Андреев — книги на Литрес</a> <span class="source-description"></span></li>
+                    <li><a href="https://www.culture.ru/literature/poems/author-anna-akhmatova?ysclid=mplg2ua4mk838517102" target="_blank" rel="noopener noreferrer">А. Ахматова — стихи на портале Культура.РФ</a></li>
+                    <li><a href="https://www.litres.ru/author/ivan-bunin/" target="_blank" rel="noopener noreferrer">И. Бунин — все книги на Литрес</a> <span class="source-description">— скачать и читать онлайн</span></li>
+                    <li><a href="https://www.litres.ru/book/sergey-esenin/stihotvoreniya-i-poemy-6896625/" target="_blank" rel="noopener noreferrer">С. Есенин — «Стихотворения и поэмы» на Литрес</a> <span class="source-description">— читать онлайн</span></li>
+                    <li><a href="https://www.culture.ru/literature/poems/author-fedor-tyutchev?ysclid=mplg5as5ym543991488" target="_blank" rel="noopener noreferrer">Ф. Тютчев — стихи на портале Культура.РФ</a></li>
+                </ul>
+            </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
-                <a href="index.html" class="back-button">← На главную</a>
+            <div class="double-buttons">
+                <a href="team.html" class="back-button">←Участники</a>
+                <a href="index.html" class="next-button">На главную →</a>
             </div>
         </div>
     </div>
 </main>
+
 <footer class="footer">
     <div class="container">
     </div>
 </footer>
-<script>
-    const dotsBtn = document.getElementById('dotsBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
-    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
-</script>
+
 </body>
 </html>

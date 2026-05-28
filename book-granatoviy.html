@@ -9,13 +9,13 @@
     <style>
         .book-page-layout { display: flex; gap: 32px; margin: 40px 0 32px; flex-wrap: wrap; }
         .book-cover-small { flex-shrink: 0; width: 180px; }
-        .book-cover-small img { width: 180px; height: auto; border-radius: 12px; box-shadow: 6px 10px 18px rgba(0,0,0,0.12); display: block; }
+        .book-cover-small img { width: 100%; height: auto; border-radius: 12px; box-shadow: 6px 10px 18px rgba(0,0,0,0.12); display: block; }
         .book-text-content { flex: 1; min-width: 200px; }
         .book-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: #2b2b28; margin-bottom: 6px; }
         .book-author { font-size: 1rem; color: #9b6a5c; margin-bottom: 20px; border-bottom: 1px solid #e8e2d4; padding-bottom: 12px; }
         .book-description p { line-height: 1.65; margin-bottom: 18px; color: #2f2e2a; font-size: 1rem; }
         .value-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 20px; }
-        .chip { background: #f8f5ef; padding: 4px 14px; border-radius: 30px; font-size: 0.8rem; font-weight: 500; color: #9b6a5c; transition: transform 0.2s, background 0.2s; cursor: default; display: inline-block; }
+        .chip { background: #f8f5ef; padding: 4px 14px; border-radius: 30px; font-size: 0.8rem; font-weight: 500; color: #9b6a5c; transition: transform 0.2s, background 0.2s; cursor: pointer; display: inline-block; text-decoration: none; }
         .chip:hover { transform: translateY(-3px); background: #efe6db; }
         .writer-section { background: #fff9f0; padding: 28px 32px; border-radius: 24px; border-left: 4px solid #bc9a6c; margin: 20px 0 32px; transition: all 0.3s ease; cursor: pointer; }
         .writer-section:hover { background: #fff7ea; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transform: translateX(4px); border-left-color: #9b6a5c; }
@@ -25,60 +25,90 @@
         .writer-section strong { color: #9b6a5c; }
         .writer-hint { margin-top: 12px; font-size: 0.75rem; color: #bc9a6c; opacity: 0; transition: opacity 0.2s; text-align: right; }
         .writer-section:hover .writer-hint { opacity: 1; }
-        .back-link { margin: 20px 0 60px; }
-        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.9rem; }
+        .full-text-button { display: inline-block; background: #9b6a5c; color: white; padding: 12px 28px; border-radius: 40px; text-decoration: none; font-weight: 500; transition: all 0.2s; box-shadow: 0 2px 8px rgba(155,106,92,0.2); margin: 10px 0; }
+        .full-text-button:hover { background: #7e5548; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(155,106,92,0.3); }
+        .double-buttons { display: flex; justify-content: space-between; gap: 20px; margin: 40px 0 60px; flex-wrap: wrap; }
+        .back-button, .next-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.95rem; }
         .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
-        @media (max-width: 600px) {
-            .book-page-layout { flex-direction: column; align-items: center; gap: 20px; }
+        .next-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(4px); }
+        @media (max-width: 700px) {
+            .book-page-layout { flex-direction: column; align-items: center; }
             .book-cover-small { width: 160px; }
-            .book-cover-small img { width: 160px; }
             .book-title { font-size: 1.7rem; text-align: center; }
             .book-author { text-align: center; }
             .value-chips { justify-content: center; }
+            .double-buttons { flex-direction: column; align-items: center; }
         }
-        .full-text-button {
-    display: inline-block;
-    background: #9b6a5c;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s;
-    box-shadow: 0 2px 8px rgba(155,106,92,0.2);
+        /* ===== НОВАЯ ГОРИЗОНТАЛЬНАЯ ШАПКА ===== */
+.main-header {
+    background: #fefcf5;
+    border-bottom: 1px solid #e8e2d4;
+    padding: 20px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-.full-text-button:hover {
-    background: #7e5548;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(155,106,92,0.3);
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #2b2b28;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    color: #9b6a5c;
+    transform: translateY(-1px);
+}
+
+/* мобильная версия */
+@media (max-width: 700px) {
+    .main-header {
+        padding: 12px 16px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
 }
     </style>
 </head>
 <body>
-<div class="top-bar">
-    <button class="three-dots" id="dotsBtn">⋯</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-         <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="goals.html">Цели и задачи</a>
-        <a href="writers.html">Писатели</a>
-        <a href="books.html">Произведения</a>
-        <a href="team.html">Участники</a>
-        <a href="bibliography.html">Библиография</a>
-    </div>
-</div>
+
+<header class="main-header">
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="goals.html" class="nav-link">Цели и задачи</a>
+            <a href="writers.html" class="nav-link">Писатели</a>
+            <a href="books.html" class="nav-link">Произведения</a>
+            <a href="team.html" class="nav-link">Участники</a>
+            <a href="bibliography.html" class="nav-link">Библиография</a>
+        </div>
+    </nav>
+</header>
+
 <main>
     <div class="container">
-        <div class="values-header">
-            <div class="values-cloud">
-                <a href="value-vera.html" class="value-link value-1">Вера</a>
-                <a href="value-dobro.html" class="value-link value-2">Добро</a>
-                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
-                <a href="value-love.html" class="value-link value-5">Любовь</a>
-                <a href="value-semia.html" class="value-link value-7">Семья</a>
-                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
-            </div>
-        </div>
         <div class="book-page-layout">
             <div class="book-cover-small">
                 <img src="гранатовый браслет.jpg" alt="Куприн - Гранатовый браслет">
@@ -101,6 +131,7 @@
                 </div>
             </div>
         </div>
+
         <div class="writer-section" id="writerSection">
             <h3> Об Александре Куприне</h3>
             <p>Александр Иванович Куприн — мастер психологического портрета и тонкий ценитель человеческих душ. Он писал о любви, чести, достоинстве «маленького человека» и вечных ценностях.</p>
@@ -108,26 +139,26 @@
             <p><strong>Духовный урок Куприна:</strong> любовь не требует награды. Умение любить бескорыстно — признак высокой души.</p>
             <div class="writer-hint">→ Подробнее об авторе</div>
         </div>
-         <div class="full-text-link-wrapper">
-    <a href="granatoviy-full.html" class="full-text-button" target="_blank"> Читать полный текст «Гранатовый браслет»</a>
-</div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
-            <a href="books.html" class="back-button">← Ко всем произведениям</a>
-            <a href="book-strannik.html" class="back-button">→ Очаровательный странник</a>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="granatoviy-full.html" class="full-text-button" target="_blank">
+                 Читать полный текст «Гранатовый браслет»
+            </a>
+        </div>
+
+        <div class="double-buttons">
+            <a href="book-rekviem.html" class="back-button">← Реквием</a>
+            <a href="book-strannik.html" class="next-button">→ Очарованный странник</a>
         </div>
     </div>
-   
 </main>
+
 <footer class="footer">
     <div class="container">
     </div>
 </footer>
+
 <script>
-    const dotsBtn = document.getElementById('dotsBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
-    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
-    
     document.getElementById('writerSection')?.addEventListener('click', () => {
         window.location.href = 'writer-kuprin.html';
     });

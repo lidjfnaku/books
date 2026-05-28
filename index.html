@@ -3,28 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Духовно-нравственные ценности через российскую литературу серебрянного века</title>
+    <title>Духовно-нравственные ценности через российскую литературу. Серебряный век</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для новой шапки — в едином стиле с сайтом */
+        .main-header {
+            background: #fefcf5;
+            border-bottom: 1px solid #e8e2d4;
+            padding: 20px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .main-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+        }
+        .nav-link {
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            color: #2b2b28;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 6px 0;
+            letter-spacing: 0.3px;
+        }
+        .nav-link:hover {
+            color: #9b6a5c;
+            transform: translateY(-1px);
+        }
+        
+        /* остальные стили как в твоём оригинале */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 400;
+            color: #2b2b28;
+            letter-spacing: -0.3px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero p {
+            margin-top: 24px;
+            color: #5e5b55;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .next-button {
+            display: inline-block;
+            padding: 10px 24px;
+            background: transparent;
+            border: 1px solid #d9cdbb;
+            border-radius: 40px;
+            color: #7e6f5c;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .next-button:hover {
+            background: #f3efe8;
+            border-color: #bc9a6c;
+            color: #9b6a5c;
+            transform: translateX(4px);
+        }
+        .footer {
+            border-top: 1px solid #e8e2d4;
+            padding: 40px 0;
+            text-align: center;
+            color: #8b8478;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+        .values-header {
+            padding: 48px 0 24px;
+            border-bottom: 1px solid #e8e2d4;
+        }
+        .values-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px 28px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .value-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s;
+            cursor: pointer;
+        }
+        .value-link:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+        .value-1 { color: #9b6a5c; }
+        .value-2 { color: #6f8f6a; }
+        .value-4 { color: #c17a5c; }
+        .value-5 { color: #bc9a6c; }
+        .value-7 { color: #7e8f6e; }
+        .value-8 { color: #a57164; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.9rem; }
+            .main-header { padding: 12px 16px; }
+            .nav-links { gap: 16px; }
+            .nav-link { font-size: 0.8rem; }
+            .values-cloud { font-size: 1rem; gap: 12px 18px; }
+            .container { padding: 0 20px; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="top-bar">
-    <button class="three-dots" id="dotsBtn">⋯</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="goals.html">Цели и задачи</a>
-        <a href="writers.html">Писатели</a>
-        <a href="books.html">Произведения</a>
-        <a href="team.html">Участники</a>
-        <a href="bibliography.html">Библиография</a>
-    </div>
-</div>
+<!-- НОВАЯ ШАПКА — горизонтальное меню -->
+<header class="main-header">
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="goals.html" class="nav-link">Цели и задачи</a>
+            <a href="writers.html" class="nav-link">Писатели</a>
+            <a href="books.html" class="nav-link">Произведения</a>
+                                    <a href="team.html" class="nav-link">Участники</a>
+            <a href="bibliography.html" class="nav-link">Библиография</a>
+        </div>
+    </nav>
+</header>
 
 <main>
     <div class="container">
-        <div class="values-header">
+
+        <div class="hero">
+            <h1>Духовно-нравственные ценности через российскую литературу<br>Серебряного века</h1>
+            <p>Культура, традиции, смыслы — в поэзии, прозе и судьбах великих писателей</p>
+        </div>
+
+                <div class="values-header">
             <div class="values-cloud">
                 <a href="value-vera.html" class="value-link value-1">Вера</a>
                 <a href="value-dobro.html" class="value-link value-2">Добро</a>
@@ -35,16 +168,8 @@
             </div>
         </div>
 
-        <div class="hero">
-            <h1>Духовно-нравственные ценности через российскую литературу<br>Серебряного века</h1>
-            <p>Культура, традиции, смыслы — в поэзии, прозе и судьбах великих писателей</p>
-        </div>
-
-        
-
-        <!-- Кнопка на страницу с писателями -->
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
-            <a href="writers.html" class="next-button">→ К писателям</a>
+        <div style="display: flex; justify-content: center; align-items: center; margin: 40px 0 60px;">
+            <a href="about.html" class="next-button">→ О проекте</a>
         </div>
     </div>
 </main>
@@ -54,20 +179,5 @@
     </div>
 </footer>
 
-<script>
-    const dotsBtn = document.getElementById('dotsBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-
-    dotsBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('show');
-        }
-    });
-</script>
 </body>
 </html>

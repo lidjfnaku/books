@@ -15,46 +15,94 @@
         .about-content li { margin-bottom: 10px; line-height: 1.6; color: #2f2e2a; }
         .values-box { background: #f8f5ef; padding: 24px 32px; border-radius: 24px; margin: 32px 0; }
         .values-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 16px; }
-        .back-link { margin: 40px 0 60px; text-align: center; }
-        .back-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; }
+        .double-buttons { display: flex; justify-content: space-between; gap: 20px; margin: 48px 0 60px; flex-wrap: wrap; }
+        .back-button, .next-button { display: inline-block; padding: 10px 24px; background: transparent; border: 1px solid #d9cdbb; border-radius: 40px; color: #7e6f5c; text-decoration: none; transition: all 0.2s; font-size: 0.95rem; }
         .back-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(-4px); }
+        .next-button:hover { background: #f3efe8; border-color: #bc9a6c; color: #9b6a5c; transform: translateX(4px); }
+        @media (max-width: 700px) { .about-content h1 { font-size: 1.8rem; } }
+        /* ===== НОВАЯ ГОРИЗОНТАЛЬНАЯ ШАПКА ===== */
+.main-header {
+    background: #fefcf5;
+    border-bottom: 1px solid #e8e2d4;
+    padding: 20px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #2b2b28;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+    color: #9b6a5c;
+    transform: translateY(-1px);
+}
+
+/* мобильная версия */
+@media (max-width: 700px) {
+    .main-header {
+        padding: 12px 16px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
     </style>
 </head>
 <body>
-<div class="top-bar">
-    <button class="three-dots" id="dotsBtn">⋯</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="goals.html">Цели и задачи</a>
-        <a href="writers.html">Писатели</a>
-        <a href="books.html">Произведения</a>
-        <a href="team.html">Участники</a>
-        <a href="bibliography.html">Библиография</a>
-    </div>
-</div>
+
+<header class="main-header">
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="about.html" class="nav-link">О проекте</a>
+            <a href="goals.html" class="nav-link">Цели и задачи</a>
+            <a href="writers.html" class="nav-link">Писатели</a>
+            <a href="books.html" class="nav-link">Произведения</a>
+                                    <a href="team.html" class="nav-link">Участники</a>
+            <a href="bibliography.html" class="nav-link">Библиография</a>
+
+        </div>
+    </nav>
+</header>
+
 <main>
     <div class="container">
-        <div class="values-header">
-            <div class="values-cloud">
-                <a href="value-vera.html" class="value-link value-1">Вера</a>
-                <a href="value-dobro.html" class="value-link value-2">Добро</a>
-                <a href="value-sovest.html" class="value-link value-4">Совесть</a>
-                <a href="value-love.html" class="value-link value-5">Любовь</a>
-                <a href="value-semia.html" class="value-link value-7">Семья</a>
-                <a href="value-patriotizm.html" class="value-link value-8">Патриотизм</a>
-            </div>
-        </div>
-
         <div class="about-content">
             <h1>О проекте</h1>
-            <p>Наш проект посвящён литературе серебряного века — бесценному наследию, которое помогает глубже понять истоки отечественной культуры, традиции и мировоззрение наших предков.</p>
-            <p>Мы стремимся сделать литературу серебряного века доступной и интересной широкому кругу читателей: от школьников и студентов до всех, кто ценит историю и слово.</p>
+            <p>Наш проект посвящён древнерусской прозе — бесценному наследию, которое помогает глубже понять истоки отечественной культуры, традиции и мировоззрение наших предков.</p>
+            <p>Мы стремимся сделать древнерусскую литературу доступной и интересной широкому кругу читателей: от школьников и студентов до всех, кто ценит историю и слово.</p>
 
             <h2>Что вы найдёте на нашем сайте</h2>
             <ul>
-                <li>оригинальные тексты произведений серебряного века с удобной навигацией;</li>
-                <li>подборки цитат и ключевых идей, раскрывающих нравственные ценности России серебряного века.</li>
+                <li>оригинальные тексты древнерусских произведений с удобной навигацией;</li>
+                <li>комментарии и пояснения к устаревшим словам и выражениям;</li>
+                <li>статьи об истории создания памятников древнерусской литературы;</li>
+                <li>материалы о культурных и исторических контекстах эпохи;</li>
+                <li>подборки цитат и ключевых идей, раскрывающих нравственные ценности Древней Руси.</li>
             </ul>
 
             <div class="values-box">
@@ -64,23 +112,20 @@
                 <p><strong>Мудрость</strong> — ценность знания, опыта и рассудительности.</p>
             </div>
 
-            <p>Наш проект — это не просто библиотека текстов, а пространство для осмысления вечных ценностей, запечатлённых в произведениях серебряного века. Мы верим, что знакомство с этими произведениями обогащает внутренний мир человека, помогает найти ответы на важные жизненные вопросы и укрепляет связь поколений.</p>
+            <p>Наш проект — это не просто библиотека текстов, а пространство для осмысления вечных ценностей, запечатлённых в древнерусской словесности. Мы верим, что знакомство с этими произведениями обогащает внутренний мир человека, помогает найти ответы на важные жизненные вопросы и укрепляет связь поколений.</p>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 40px 0 60px;">
+        <div class="double-buttons">
             <a href="index.html" class="back-button">← На главную</a>
+            <a href="goals.html" class="next-button">Цели и задачи →</a>
         </div>
     </div>
 </main>
+
 <footer class="footer">
     <div class="container">
     </div>
 </footer>
-<script>
-    const dotsBtn = document.getElementById('dotsBtn');
-    const dropdown = document.getElementById('dropdownMenu');
-    dotsBtn.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.toggle('show'); });
-    document.addEventListener('click', (e) => { if (!dotsBtn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove('show'); });
-</script>
+
 </body>
 </html>
